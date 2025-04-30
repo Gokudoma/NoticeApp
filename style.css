@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-area input[type="text"],
+.input-area textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.input-area textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.input-area button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover {
+    background-color: #4cae4c;
+}
+
+.notes-section,
+.done-section,
+.archive-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.note,
+.done-note,
+.archived-note {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note h3,
+.done-note h3,
+.archived-note h3 {
+    margin-top: 0;
+    color: darkgray;
+}
+
+.note-actions,
+.archive-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.note-actions button,
+.archive-actions button,
+.done-note button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.note-actions .done-button {
+    background-color: green;
+    color: white;
+}
+
+.note-actions .done-button:hover {
+    background-color: greenyellow;
+}
+
+.note-actions .archive-button {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.note-actions .archive-button:hover {
+    background-color: cadetblue;
+}
+
+.archive-actions .restore-button {
+    background-color: blue;
+    color: white;
+}
+
+.archive-actions .restore-button:hover {
+    background-color: aqua;
+}
+
+.done-note button,
+.archive-actions .delete-button {
+    background-color: red;
+    color: white;
+}
+
+.done-note button:hover,
+.archive-actions .delete-button:hover {
+    background-color: orangered;
+}
+
+.archive-section #archive_content {
+    display: none;
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.archive-section button#archive_toggle_button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #777;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.archive-section button#archive_toggle_button:hover {
+    background-color: #555;
+}
