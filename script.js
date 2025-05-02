@@ -45,7 +45,7 @@ function renderNotes(){
     contentRef.innerHTML = "";
 
     for (let indexNote = 0; indexNote < notes.length; indexNote++) {
-        contentRef.innerHTML += getNoteTemplate(indexNote, notes[indexNote].title, notes[indexNote].text);
+        contentRef.innerHTML += getNoteTemplate(indexNote, notes[indexNote]);
     }
 }
 
@@ -54,7 +54,7 @@ function renderDoneNotes(){
     doneContentRef.innerHTML = "";
 
     for (let indexDoneNote = 0; indexDoneNote < doneNotes.length; indexDoneNote++) {
-        doneContentRef.innerHTML += getDoneNoteTemplate(indexDoneNote, doneNotes[indexDoneNote].title, doneNotes[indexDoneNote].text);
+        doneContentRef.innerHTML += getDoneNoteTemplate(indexDoneNote, doneNotes[indexDoneNote]);
     }
 }
 
@@ -64,7 +64,7 @@ function renderArchive(){
 
     if (showArchive) {
         for (let indexArchivedNote = 0; indexArchivedNote < archivedNotes.length; indexArchivedNote++) {
-            archiveContentRef.innerHTML += getArchivedNoteTemplate(indexArchivedNote, archivedNotes[indexArchivedNote].title, archivedNotes[indexArchivedNote].text);
+            archiveContentRef.innerHTML += getArchivedNoteTemplate(indexArchivedNote, archivedNotes[indexArchivedNote]);
         }
         archiveContentRef.style.display = 'block';
     } else {
@@ -135,4 +135,3 @@ function deleteArchivedNote(indexArchivedNote){
     renderArchive();
     saveNotes();
 }
-
