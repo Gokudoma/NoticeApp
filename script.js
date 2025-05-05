@@ -90,6 +90,11 @@ function addNote(){
     let noteText = noteInputRef.value;
     let noteTitle = noteTitleInputRef.value;
 
+    if (noteText.trim() === "") {
+        alert("Bitte gib einen Text für deine Notiz ein.");
+        return;
+    }
+
     if (noteText.trim() !== "") {
         notes.push({ title: noteTitle.trim() !== "" ? noteTitle : "Kein Titel", text: noteText });
         renderNotes();
